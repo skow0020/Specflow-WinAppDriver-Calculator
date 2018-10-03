@@ -4,11 +4,11 @@
 	I want to be told the sum of two numbers
 
 Scenario: Basepage is Calculator
-	Given I navigated to Standard Calculator
+	Given the calculator app is open
 	Then Calculator title is Standard
 
 Scenario Outline: Add Two Numbers
-	Given I navigated to Standard Calculator
+	Given the calculator app is open
 	And I have entered <SummandOne> into calculator
 	And I press plus
 	And I have entered <SummandTwo> into calculator

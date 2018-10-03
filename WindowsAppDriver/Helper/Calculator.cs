@@ -26,7 +26,7 @@ namespace CalculatorUnitTests.Helper
             _driver.Current.FindElementByAccessibilityId(sign + "Button").Click();
         }
 
-        public void NavigateToStandard()
+        public void AppOpened()
         {
             //_driver.Current.FindElementByAccessibilityId("NavButton").Click();
             //_driver.Current.FindElementByAccessibilityId("FlyoutNav").FindElementsByClassName("ListViewItem")[0].Click();
