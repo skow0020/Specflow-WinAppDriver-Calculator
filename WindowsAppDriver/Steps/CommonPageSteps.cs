@@ -5,11 +5,11 @@ using TechTalk.SpecFlow;
 namespace CalculatorUnitTests.Steps
 {
     [Binding]
-    public class PageSteps
+    public class CommonPageSteps
     {
         private readonly CommonPage _commonPage;
 
-        public PageSteps(CommonPage page)
+        public CommonPageSteps(CommonPage page)
         {
             _commonPage = page;
         }

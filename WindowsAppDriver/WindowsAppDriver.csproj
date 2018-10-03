@@ -100,12 +100,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Calculator.feature</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Calculator.cs" />
     <Compile Include="Pages\CommonPage.cs" />
     <Compile Include="Pages\NewPage.cs" />
     <Compile Include="Steps\Hooks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Steps\PageSteps.cs" />
+    <Compile Include="Steps\CommonPageSteps.cs" />
+    <Compile Include="Steps\NewPageSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

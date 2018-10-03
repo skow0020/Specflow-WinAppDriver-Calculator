@@ -10,13 +10,11 @@ namespace CalculatorUnitTests.Steps
     [Binding]
     public class Hooks
     {
-        // private readonly Calculator _calculator;
         private readonly CommonPage _commonPage;
         private static Process _driver;
 
         public Hooks(CommonPage page)
         {
-            //_calculator = calculator;
             _commonPage = page;
         }
 
