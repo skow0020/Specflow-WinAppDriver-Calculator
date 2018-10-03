@@ -1,11 +1,6 @@
-﻿using System;
-using System.Configuration;
-using System.Diagnostics;
-using System.IO;
-using CalculatorUnitTests.Driver;
-using CalculatorUnitTests.Helper;
+﻿using CalculatorUnitTests.Pages;
 using FluentAssertions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Diagnostics;
 using TechTalk.SpecFlow;
 
 namespace CalculatorUnitTests.Steps
@@ -14,7 +9,6 @@ namespace CalculatorUnitTests.Steps
     public class PageSteps
     {
         private readonly Calculator _calculator;
-        private static Process _driver;
 
         public PageSteps(Calculator calculator)
         {

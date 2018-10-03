@@ -1,8 +1,8 @@
 ﻿using CalculatorUnitTests.Driver;
+using OpenQA.Selenium;
 
-namespace CalculatorUnitTests.Helper
+namespace CalculatorUnitTests.Pages
 {
-    // ReSharper disable once ClassNeverInstantiated.Global
     public class Calculator
     {
         private readonly WinAppDriver _driver;
@@ -10,7 +10,11 @@ namespace CalculatorUnitTests.Helper
         public Calculator(WinAppDriver driver)
         {
             _driver = driver;
+        }
 
+        private IWebElement Header
+        {
+            get { return _driver.Current.FindElementByAccessibilityId("Header"); }
         }
 
         public void EnterNumber(string number)
@@ -28,15 +32,13 @@ namespace CalculatorUnitTests.Helper
 
         public void AppOpened()
         {
-            //_driver.Current.FindElementByAccessibilityId("NavButton").Click();
-            //_driver.Current.FindElementByAccessibilityId("FlyoutNav").FindElementsByClassName("ListViewItem")[0].Click();
+            GetTitle();
         }
 
         public string GetTitle()
         {
-            return _driver.Current.FindElementByAccessibilityId("Header").Text.Trim();
+            return Header.Text.Trim();
         }
-
 
         public string GetResult()
         {
