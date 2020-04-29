@@ -1,5 +1,5 @@
-﻿using OpenQA.Selenium.Appium.Windows;
-using OpenQA.Selenium.Remote;
+﻿using OpenQA.Selenium.Appium;
+using OpenQA.Selenium.Appium.Windows;
 using System;
 using System.Configuration;
 
@@ -13,14 +13,16 @@ namespace CalculatorUnitTests.Driver
         {
             get
             {
-                if (_driver != null)
+                if (_driver == null)
                 {
-                    return _driver;
-                }
+                    var options = new AppiumOptions
+                    {
+                        PlatformName = "Windows"
+                    };
+                    options.AddAdditionalCapability("app", "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App");
 
-                var capabilities = new DesiredCapabilities();
-                capabilities.SetCapability("app", "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App");
-                _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), capabilities);
+                    _driver = new WindowsDriver<WindowsElement>(new Uri(ConfigurationManager.AppSettings["winAppUri"]), options);
+                }
 
                 return _driver;
             }

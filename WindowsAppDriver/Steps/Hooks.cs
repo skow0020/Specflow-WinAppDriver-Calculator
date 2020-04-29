@@ -1,5 +1,4 @@
-﻿using CalculatorUnitTests.Pages;
-using System;
+﻿using System;
 using System.Configuration;
 using System.Diagnostics;
 using System.IO;
@@ -10,12 +9,10 @@ namespace CalculatorUnitTests.Steps
     [Binding]
     public class Hooks
     {
-        private readonly CommonPage _commonPage;
-        private static Process _driver;
+        private static Process _driverPath;
 
-        public Hooks(CommonPage page)
+        public Hooks()
         {
-            _commonPage = page;
         }
 
         [BeforeTestRun]
@@ -23,7 +20,7 @@ namespace CalculatorUnitTests.Steps
         {
             try
             {
-                _driver = Process.Start(ConfigurationManager.AppSettings["winAppPath"]);
+                _driverPath = Process.Start(ConfigurationManager.AppSettings["winAppPath"]);
             }
             catch (Exception e)
             {
@@ -35,7 +32,7 @@ namespace CalculatorUnitTests.Steps
         [AfterTestRun]
         public static void KillWinAppDriver()
         {
-            _driver.Kill();
+            _driverPath.Kill();
         }
     }
 }

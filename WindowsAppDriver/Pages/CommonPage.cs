@@ -12,10 +12,7 @@ namespace CalculatorUnitTests.Pages
             _driver = driver;
         }
 
-        private IWebElement Header
-        {
-            get { return _driver.Current.FindElementByAccessibilityId("Header"); }
-        }
+        private IWebElement Header => _driver.Current.FindElementByAccessibilityId("Header"); 
 
         public void EnterNumber(string number)
         {

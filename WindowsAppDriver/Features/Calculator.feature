@@ -6,6 +6,7 @@
 Scenario: Basepage is Calculator
 	Given the calculator app is open
 	Then Calculator title is Standard
+	Then more
 
 Scenario Outline: Add Two Numbers
 	Given the calculator app is open

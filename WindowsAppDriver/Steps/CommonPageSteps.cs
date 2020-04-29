@@ -39,15 +39,15 @@ namespace CalculatorUnitTests.Steps
         }
 
         [Then(@"Calculator title is (.*)")]
-        public void ThenBrowserTitleIs(string p0)
+        public void ThenBrowserTitleIs(string title)
         {
-            _commonPage.GetTitle().Should().Be(p0);
+            _commonPage.GetTitle().Should().Be(title);
         }
 
         [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreen(string p0)
+        public void ThenTheResultShouldBeOnTheScreen(string result)
         {
-            _commonPage.GetResult().Should().Be(p0);
+            _commonPage.GetResult().Should().Be(result);
         }
     }
 }

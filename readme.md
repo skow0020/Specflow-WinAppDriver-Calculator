@@ -1,6 +1,6 @@
 # Windows App Driver Example
 
-This is a example how to use SpecFlow and SpecFlow+Runner to run Windows App Tests with WinAppDriver
+This is a example how to use SpecFlow and xunit to run Windows App Tests with WinAppDriver
 
 ## Important
 
